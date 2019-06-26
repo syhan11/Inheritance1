@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class Product {
+abstract class Product {
 
     private String code;
     private String description;
@@ -15,8 +15,6 @@ public class Product {
     }
 
     // Get and set accessors for the code, description, and price instance variables
-
-
     public String getCode() {
         return code;
     }
@@ -60,8 +58,6 @@ public class Product {
         return count;
     }
 
-    // Create public access for the count variable
-    public int getItemCount() {
-        return getCount();
-    }
+    // Create an abstract method - i.e. all subclass should define this method
+    abstract int getItemCount();
 }

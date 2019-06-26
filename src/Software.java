@@ -60,8 +60,7 @@ public class Software extends Product {
                 "Operating System:   " + this.os;
     }
 
-    // Create public access for the count variable for Software class
-    @Override
+    // Define an abstract method of super class
     public  int getItemCount() {
         return count;
     }

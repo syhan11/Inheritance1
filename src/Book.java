@@ -54,9 +54,7 @@ public class Book extends Product {
                 "Pages:              " + this.pages;
     }
 
-    // Create public access for the count variable for Book class
-
-    @Override
+    // Define an abstract method of super class
     public int getItemCount() {
         return count;
     }
