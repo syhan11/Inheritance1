@@ -3,6 +3,7 @@ public class Software extends Product {
     private String programmer;
     private String platform; // linux, mac, or pc
     private String os;
+    protected static int count = 0;
 
     public Software() {
         this.setCode("");
@@ -11,6 +12,7 @@ public class Software extends Product {
         this.programmer = "";
         this.platform = "";
         this.os = "";
+        count++;
     }
 
     public Software(String pCode, String pDesc, double pPrice, String pPgmr, String pPF, String pOS) {
@@ -21,6 +23,7 @@ public class Software extends Product {
         this.programmer = pPgmr;
         this.platform = pPF;
         this.os = pOS;
+        count++;
     }
 
     public String getProgrammer() {
@@ -45,5 +48,21 @@ public class Software extends Product {
 
     public void setOs(String os) {
         this.os = os;
+    }
+
+    @Override
+    public String toString() {
+        return  "Code:               " + this.getCode() + "\n" +
+                "Description:        " + this.getDescription() + "\n" +
+                "Price:              " + this.getFormattedPrice(this.getPrice()) + "\n" +
+                "Programmer:         " + this.programmer + "\n" +
+                "Platform:           " + this.platform + "\n" +
+                "Operating System:   " + this.os;
+    }
+
+    // Create public access for the count variable for Software class
+    @Override
+    public  int getItemCount() {
+        return count;
     }
 }

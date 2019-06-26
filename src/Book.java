@@ -45,8 +45,19 @@ public class Book extends Product {
         this.pages = pages;
     }
 
-    // Create public access for the count variable
-    public static int getBookCount() {
+    @Override
+    public String toString() {
+        return  "Code:               " + this.getCode() + "\n" +
+                "Description:        " + this.getDescription() + "\n" +
+                "Price:              " + this.getFormattedPrice(this.getPrice()) + "\n" +
+                "Author:             " + this.author + "\n" +
+                "Pages:              " + this.pages;
+    }
+
+    // Create public access for the count variable for Book class
+
+    @Override
+    public int getItemCount() {
         return count;
     }
 }

@@ -49,7 +49,7 @@ public class Product {
                 "Price:              " + this.getFormattedPrice(this.price) + "\n";
     }
 
-    private String getFormattedPrice(double valD) {
+    public String getFormattedPrice(double valD) {
         // Use the NumberFormat class to format the price to 2 decimal places
 
         return NumberFormat.getCurrencyInstance().format(valD);
@@ -58,5 +58,10 @@ public class Product {
     // Create public access for the count variable
     public static int getCount() {
         return count;
+    }
+
+    // Create public access for the count variable
+    public int getItemCount() {
+        return getCount();
     }
 }
