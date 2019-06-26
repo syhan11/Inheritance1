@@ -1,4 +1,4 @@
-public class Software extends Product {
+final public class Software extends Product {
 
     private String programmer;
     private String platform; // linux, mac, or pc

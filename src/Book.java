@@ -1,4 +1,4 @@
-public class Book extends Product {
+final public class Book extends Product {
 
     private String author;
     private int pages;
